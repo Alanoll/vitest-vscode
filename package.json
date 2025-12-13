@@ -1,8 +1,8 @@
 {
   "publisher": "vitest",
-  "name": "explorer",
-  "displayName": "Vitest",
-  "version": "1.38.0",
+  "name": "vitest-vscode-custom",
+  "displayName": "Vitest - Custom Build",
+  "version": "1.38.1",
   "packageManager": "pnpm@10.11.1",
   "description": "A Vite-native testing framework. It's fast!",
   "author": "Vitest Team",
