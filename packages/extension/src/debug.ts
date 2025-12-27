@@ -163,7 +163,7 @@ export async function debugTests(
           })
 
           if (browserDebug) {
-            const browserAttachConfig = {
+            const browserAttachConfig: vscode.DebugConfiguration = {
               __name: BrowserDebugSessionName,
               __parentId: debugId,
               request: 'attach',
@@ -175,6 +175,7 @@ export async function debugTests(
                   ? { outFiles: config.debugOutFiles }
                   : {}
               ),
+              webRoot: config.browserDebugWebRoot ? config.browserDebugWebRoot : undefined,
               smartStep: true,
               skipFiles,
               cwd: pkg.cwd,

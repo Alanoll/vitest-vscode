@@ -73,6 +73,8 @@ export function getConfig(workspaceFolder?: WorkspaceFolder) {
   const applyDiagnostic = get<boolean>('applyDiagnostic', true)
   const ignoreWorkspace = get<boolean>('ignoreWorkspace', false) ?? false
 
+  const browserDebugWebRoot = get<string | undefined>('browserDebugWebRoot')
+
   return {
     env: get<null | Record<string, string>>('nodeEnv', null),
     debugExclude: get<string[]>('debugExclude'),
@@ -98,6 +100,7 @@ export function getConfig(workspaceFolder?: WorkspaceFolder) {
     debuggerAddress: get<string>('debuggerAddress', undefined) || undefined,
     logLevel,
     showImportsDuration: get<boolean>('showImportsDuration', true) ?? true,
+    browserDebugWebRoot,
   }
 }
 

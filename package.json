@@ -267,6 +267,11 @@
           "description": "Show how long it took to import the module during the last test run. If multiple isolated tests imported the module, the times will be aggregated.",
           "type": "boolean",
           "default": true
+        },
+        "vitest.browserDebugWebRoot": {
+          "markdownDescription": "When debugging browser tests, sets the `webRoot` property in the [launch configuration](https://code.visualstudio.com/docs/nodejs/browser-debugging#_launch-configuration-attributes) to map the local files to the files served in the browser.",
+          "type": "string",
+          "scope": "resource"
         }
       }
     }
